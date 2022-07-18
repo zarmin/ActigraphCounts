@@ -84,7 +84,7 @@ counts = function(data, filesf, B=B_coeff, A=A_coeff){
   gain = 0.965
   
   if(filesf>sf) {
-    datares = resamp(data, filesf, sf, 'matrix')
+    datares = resamp(data, filesf, sf, output = 'matrix')
   }
   
   datab = bwfilter(datares, f = sf, n=4, from = 0.01, to = 7, bandpass = TRUE)
